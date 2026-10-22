@@ -4,6 +4,12 @@
    fantasy-theme-<Color>, fantasy-theme-accent, fantasy-theme-card-off.
    Without them: Dark color, Plasma background, card layout on. */
 
+/* Native controls (scrollbars, inputs, date pickers) follow the mode and the accent.
+   The date picker popup itself is drawn by Chromium: these two are all CSS can set. */
+body {
+	accent-color: var(--interactive-accent);
+}
+
 /* Native controls (scrollbars, inputs, date pickers) follow the mode */
 .theme-dark {
 	color-scheme: dark;
