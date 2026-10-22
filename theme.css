@@ -1334,9 +1334,10 @@ body {
 	margin-bottom: 24px;
 }
 
-.metadata-properties-heading {
-	font-size: var(--font-ui-small);
-	color: var(--text-faint);
+/* The tray speaks for itself: no "Properties" heading, except when the properties are folded
+   (then the heading is the only way to unfold them) */
+.metadata-container:not(.is-collapsed) .metadata-properties-heading {
+	display: none;
 }
 
 /* Obsidian - Graph View */
