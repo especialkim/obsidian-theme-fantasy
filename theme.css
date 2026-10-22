@@ -979,12 +979,6 @@ em {
 	color: var(--italic-color);
 }
 
-.markdown-rendered i::before,
-.markdown-rendered em::before {
-	content: '🤔';
-	font-style: initial;
-}
-
 .markdown-rendered code,
 .cm-s-obsidian span.cm-inline-code {
 	border-radius: 3px;
