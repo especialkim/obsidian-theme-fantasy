@@ -1,0 +1,1494 @@
+@charset "UTF-8";
+
+/* Optional body classes (a companion plugin may set them; none are needed):
+   fantasy-theme-<Color>, fantasy-theme-accent, fantasy-theme-card-off.
+   Without them: Dark color, Plasma background, card layout on. */
+
+/* Native controls (scrollbars, inputs, date pickers) follow the mode */
+.theme-dark {
+	color-scheme: dark;
+}
+
+.theme-light {
+	color-scheme: light;
+}
+
+/* Theme - Background: Plasma, still. Follows the theme color (--fantasy-hue).
+   No network resources in the theme. */
+body.theme-dark {
+	--background-url: conic-gradient(from 0deg at 35% 55%, hsl(var(--fantasy-hue, 230) 80% 28%), hsl(calc(var(--fantasy-hue, 230) + 90) 80% 26%), hsl(calc(var(--fantasy-hue, 230) + 180) 75% 24%), hsl(calc(var(--fantasy-hue, 230) + 270) 80% 26%), hsl(var(--fantasy-hue, 230) 80% 28%));
+}
+
+body.theme-light {
+	--background-url: conic-gradient(from 0deg at 35% 55%, hsl(var(--fantasy-hue, 230) 90% 70%), hsl(calc(var(--fantasy-hue, 230) + 90) 90% 72%), hsl(calc(var(--fantasy-hue, 230) + 180) 85% 70%), hsl(calc(var(--fantasy-hue, 230) + 270) 90% 72%), hsl(var(--fantasy-hue, 230) 90% 70%));
+}
+
+/* Theme - Colors. Default (no class) = Dark. A class on body overrides it. */
+body {
+	--fantasy-background-color-rgb: 30, 30, 30;
+	--fantasy-hue: 230;
+	--fantasy-light-l: 40%;
+}
+
+.fantasy-theme-OrchidMagenta {
+	--fantasy-background-color-rgb: 37, 25, 30;
+	--fantasy-hue: 320;
+	--fantasy-light-l: 42%;
+}
+
+.fantasy-theme-EmeraldGreen {
+	--fantasy-background-color-rgb: 10, 29, 23;
+	--fantasy-hue: 155;
+	--fantasy-light-l: 26%;
+}
+
+.fantasy-theme-OceanTeal {
+	--fantasy-background-color-rgb: 11, 30, 32;
+	--fantasy-hue: 185;
+	--fantasy-light-l: 28%;
+}
+
+.fantasy-theme-SkyBlue {
+	--fantasy-background-color-rgb: 6, 13, 18;
+	--fantasy-hue: 205;
+	--fantasy-light-l: 30%;
+}
+
+.fantasy-theme-MysticPurple {
+	--fantasy-background-color-rgb: 30, 28, 41;
+	--fantasy-hue: 260;
+	--fantasy-light-l: 43%;
+}
+
+.fantasy-theme-Black {
+	--fantasy-background-color-rgb: 30, 30, 30;
+	--fantasy-hue: 230;
+	--fantasy-light-l: 40%;
+}
+
+/* Theme - Dark Colors */
+.theme-dark.fantasy-theme-OrchidMagenta,
+.theme-dark.fantasy-theme-EmeraldGreen,
+.theme-dark.fantasy-theme-OceanTeal,
+.theme-dark.fantasy-theme-SkyBlue,
+.theme-dark.fantasy-theme-MysticPurple,
+.theme-dark.fantasy-theme-Black,
+.theme-dark {
+
+	/* Obsidian Default */
+
+	--color-base-00: #1e1e1e;
+	--color-base-05: #212121;
+	--color-base-10: #242424;
+	--color-base-20: #262626;
+	--color-base-25: #2a2a2a;
+	--color-base-30: #363636;
+	--color-base-35: #3f3f3f;
+	--color-base-40: #555555;
+	--color-base-45: #505050;
+	--color-base-50: #666666;
+	--color-base-55: #7d7d7d;
+	--color-base-60: #999999;
+	--color-base-65: #909090;
+	--color-base-70: #bababa;
+	--color-base-75: #a5a5a5;
+	--color-base-80: #b5b5b5;
+	--color-base-85: #c0c0c0;
+	--color-base-90: #cccccc;
+	--color-base-95: #d6d6d6;
+	--color-base-100: #dadada;
+	--color-base-200: #FFFFFF;
+
+	--color-red-rgb: 253, 171, 174;
+	--color-orange-rgb: 239, 180, 117;
+	--color-yellow-rgb: 200, 197, 44;
+	--color-green-rgb: 97, 214, 132;
+	--color-cyan-rgb: 40, 213, 210;
+	--color-blue-rgb: 143, 196, 255;
+	--color-purple-rgb: 203, 180, 255;
+	--color-pink-rgb: 251, 166, 212;
+
+	--color-red: #fdabae;
+	--color-orange: #efb475;
+	--color-yellow: #c8c52c;
+	--color-green: #61d684;
+	--color-cyan: #28d5d2;
+	--color-blue: #8fc4ff;
+	--color-purple: #cbb4ff;
+	--color-pink: #fba6d4;
+
+	--callout-bug: rgb(208, 71, 69);
+	--callout-default: rgb(105, 105, 218);
+	--callout-error: rgb(208, 71, 69);
+	--callout-example: rgb(150, 88, 213);
+	--callout-fail: rgb(208, 71, 69);
+	--callout-important: rgb(33, 130, 130);
+	--callout-info: rgb(105, 105, 218);
+	--callout-question: rgb(166, 104, 42);
+	--callout-success: rgb(34, 135, 34);
+	--callout-summary: rgb(33, 130, 130);
+	--callout-tip: rgb(33, 130, 130);
+	--callout-todo: rgb(105, 105, 218);
+	--callout-warning: rgb(166, 104, 42);
+	--callout-quote: rgb(130, 130, 130);
+
+	/* Custom Color Var */
+
+	--background-opacity: 0.6;
+
+	--color-base-rgb-00: 0, 0, 0;
+	--color-base-rgb-05: 13, 13, 13;
+	--color-base-rgb-10: 26, 26, 26;
+	--color-base-rgb-15: 38, 38, 38;
+	--color-base-rgb-20: 51, 51, 51;
+	--color-base-rgb-25: 64, 64, 64;
+	--color-base-rgb-30: 77, 77, 77;
+	--color-base-rgb-35: 89, 89, 89;
+	--color-base-rgb-40: 102, 102, 102;
+	--color-base-rgb-45: 115, 115, 115;
+	--color-base-rgb-50: 128, 128, 128;
+	--color-base-rgb-55: 140, 140, 140;
+	--color-base-rgb-60: 153, 153, 153;
+	--color-base-rgb-65: 166, 166, 166;
+	--color-base-rgb-70: 179, 179, 179;
+	--color-base-rgb-75: 191, 191, 191;
+	--color-base-rgb-80: 204, 204, 204;
+	--color-base-rgb-85: 217, 217, 217;
+	--color-base-rgb-90: 230, 230, 230;
+	--color-base-rgb-95: 242, 242, 242;
+	--color-base-rgb-100: 255, 255, 255;
+
+	--color-bg-alpha-100: rgba(0, 0, 0, 1.0);
+	--color-bg-alpha-95: rgba(0, 0, 0, 0.95);
+	--color-bg-alpha-90: rgba(0, 0, 0, 0.9);
+	--color-bg-alpha-85: rgba(0, 0, 0, 0.85);
+	--color-bg-alpha-80: rgba(0, 0, 0, 0.8);
+	--color-bg-alpha-75: rgba(0, 0, 0, 0.75);
+	--color-bg-alpha-70: rgba(0, 0, 0, 0.7);
+	--color-bg-alpha-65: rgba(0, 0, 0, 0.65);
+	--color-bg-alpha-60: rgba(0, 0, 0, 0.6);
+	--color-bg-alpha-55: rgba(0, 0, 0, 0.55);
+	--color-bg-alpha-50: rgba(0, 0, 0, 0.5);
+	--color-bg-alpha-45: rgba(0, 0, 0, 0.45);
+	--color-bg-alpha-40: rgba(0, 0, 0, 0.4);
+	--color-bg-alpha-35: rgba(0, 0, 0, 0.35);
+	--color-bg-alpha-30: rgba(0, 0, 0, 0.3);
+	--color-bg-alpha-25: rgba(0, 0, 0, 0.25);
+	--color-bg-alpha-20: rgba(0, 0, 0, 0.2);
+	--color-bg-alpha-15: rgba(0, 0, 0, 0.15);
+	--color-bg-alpha-10: rgba(0, 0, 0, 0.1);
+	--color-bg-alpha-05: rgba(0, 0, 0, 0.05);
+	--color-bg-alpha-00: rgba(0, 0, 0, 0);
+
+	--color-text-alpha-100: rgba(255, 255, 255, 1.0);
+	--color-text-alpha-90: rgba(255, 255, 255, 0.9);
+	--color-text-alpha-80: rgba(255, 255, 255, 0.8);
+	--color-text-alpha-70: rgba(255, 255, 255, 0.7);
+	--color-text-alpha-60: rgba(255, 255, 255, 0.6);
+	--color-text-alpha-50: rgba(255, 255, 255, 0.5);
+	--color-text-alpha-40: rgba(255, 255, 255, 0.4);
+	--color-text-alpha-30: rgba(255, 255, 255, 0.3);
+	--color-text-alpha-20: rgba(255, 255, 255, 0.2);
+	--color-text-alpha-10: rgba(255, 255, 255, 0.1);
+	--color-text-alpha-03: rgba(255, 255, 255, 0.03);
+	--color-text-alpha-00: rgba(255, 255, 255, 0);
+
+	--rainbow-color-01: #f8bfbf;
+	--rainbow-color-02: #f3c494;
+	--rainbow-color-03: #d4d517;
+	--rainbow-color-04: #7fe619;
+	--rainbow-color-05: #43eb43;
+	--rainbow-color-06: #38e991;
+	--rainbow-color-07: #19e4e5;
+	--rainbow-color-08: #add1f6;
+	--rainbow-color-09: #cacaf9;
+	--rainbow-color-10: #e5bff8;
+	--rainbow-color-11: #f7b8f7;
+	--rainbow-color-12: #f8bbd9;
+
+	--h1-color: var(--rainbow-color-03);
+	--h2-color: var(--rainbow-color-04);
+	--h3-color: var(--rainbow-color-05);
+	--h4-color: var(--rainbow-color-06);
+	--h5-color: var(--rainbow-color-07);
+	--h6-color: var(--rainbow-color-08);
+
+	--deco-bold-color: hsl(75, 85%, 45%);
+	--deco-highlight1-color: hsla(176, 85%, 50%, 0.5);
+	--deco-highlight2-color: hsla(300, 85%, 50%, 0.4);
+	--deco-highlight3-color: hsla(0, 85%, 50%, 0.5);
+
+	--canvas-color: var(--color-base-rgb-80);
+}
+
+.theme-light {
+
+	/* Obsidian Default */
+
+	--color-base-00: #ffffff;
+	--color-base-05: #fcfcfc;
+	--color-base-10: #fafafa;
+	--color-base-20: #f6f6f6;
+	--color-base-25: #e3e3e3;
+	--color-base-30: #e0e0e0;
+	--color-base-35: #d4d4d4;
+	--color-base-40: #c8c8c8;
+	--color-base-45: #bdbdbd;
+	--color-base-50: #ababab;
+	--color-base-55: #9e9e9e;
+	--color-base-60: #848484;
+	--color-base-65: #707070;
+	--color-base-70: #6e6e6e;
+	--color-base-75: #5a5a5a;
+	--color-base-80: #505050;
+	--color-base-85: #474747;
+	--color-base-90: #3a3a3a;
+	--color-base-95: #2f2f2f;
+	--color-base-100: #222222;
+	--color-base-200: #000000;
+
+	--color-red-rgb: 208, 71, 69;
+	--color-orange-rgb: 166, 104, 42;
+	--color-yellow-rgb: 123, 123, 31;
+	--color-green-rgb: 34, 135, 34;
+	--color-cyan-rgb: 33, 130, 130;
+	--color-blue-rgb: 105, 105, 218;
+	--color-purple-rgb: 150, 88, 213;
+	--color-pink-rgb: 206, 61, 134;
+
+	--color-red: #d04745;
+	--color-orange: #a6682a;
+	--color-yellow: #7b7b1f;
+	--color-green: #228722;
+	--color-cyan: #218282;
+	--color-blue: #6969da;
+	--color-purple: #9658d5;
+	--color-pink: #ce3d86;
+
+	--callout-bug: rgb(170, 40, 40);
+	--callout-default: rgb(30, 90, 180);
+	--callout-error: rgb(170, 40, 40);
+	--callout-example: rgb(105, 60, 180);
+	--callout-fail: rgb(170, 40, 40);
+	--callout-important: rgb(5, 100, 100);
+	--callout-info: rgb(30, 90, 180);
+	--callout-question: rgb(145, 75, 10);
+	--callout-success: rgb(25, 105, 50);
+	--callout-summary: rgb(5, 100, 100);
+	--callout-tip: rgb(5, 100, 100);
+	--callout-todo: rgb(30, 90, 180);
+	--callout-warning: rgb(145, 75, 10);
+	--callout-quote: rgb(95, 95, 95);
+
+	/* Custom Color Var */
+
+	--background-opacity: 0.67;
+
+	--color-base-rgb-00: 255, 255, 255;
+	--color-base-rgb-05: 242, 242, 242;
+	--color-base-rgb-10: 230, 230, 230;
+	--color-base-rgb-15: 217, 217, 217;
+	--color-base-rgb-20: 204, 204, 204;
+	--color-base-rgb-25: 191, 191, 191;
+	--color-base-rgb-30: 179, 179, 179;
+	--color-base-rgb-35: 166, 166, 166;
+	--color-base-rgb-40: 153, 153, 153;
+	--color-base-rgb-45: 140, 140, 140;
+	--color-base-rgb-50: 128, 128, 128;
+	--color-base-rgb-55: 115, 115, 115;
+	--color-base-rgb-60: 102, 102, 102;
+	--color-base-rgb-65: 89, 89, 89;
+	--color-base-rgb-70: 77, 77, 77;
+	--color-base-rgb-75: 64, 64, 64;
+	--color-base-rgb-80: 51, 51, 51;
+	--color-base-rgb-85: 38, 38, 38;
+	--color-base-rgb-90: 26, 26, 26;
+	--color-base-rgb-95: 13, 13, 13;
+	--color-base-rgb-100: 0, 0, 0;
+
+	--color-bg-alpha-100: rgba(255, 255, 255, 1.0);
+	--color-bg-alpha-95: rgba(255, 255, 255, 0.95);
+	--color-bg-alpha-90: rgba(255, 255, 255, 0.9);
+	--color-bg-alpha-85: rgba(255, 255, 255, 0.85);
+	--color-bg-alpha-80: rgba(255, 255, 255, 0.8);
+	--color-bg-alpha-75: rgba(255, 255, 255, 0.75);
+	--color-bg-alpha-70: rgba(255, 255, 255, 0.7);
+	--color-bg-alpha-65: rgba(255, 255, 255, 0.65);
+	--color-bg-alpha-60: rgba(255, 255, 255, 0.6);
+	--color-bg-alpha-55: rgba(255, 255, 255, 0.55);
+	--color-bg-alpha-50: rgba(255, 255, 255, 0.5);
+	--color-bg-alpha-45: rgba(255, 255, 255, 0.45);
+	--color-bg-alpha-40: rgba(255, 255, 255, 0.4);
+	--color-bg-alpha-35: rgba(255, 255, 255, 0.35);
+	--color-bg-alpha-30: rgba(255, 255, 255, 0.3);
+	--color-bg-alpha-25: rgba(255, 255, 255, 0.25);
+	--color-bg-alpha-20: rgba(255, 255, 255, 0.2);
+	--color-bg-alpha-15: rgba(255, 255, 255, 0.15);
+	--color-bg-alpha-10: rgba(255, 255, 255, 0.1);
+	--color-bg-alpha-05: rgba(255, 255, 255, 0.05);
+	--color-bg-alpha-00: rgba(255, 255, 255, 0);
+
+	--color-text-alpha-100: rgba(0, 0, 0, 1.0);
+	--color-text-alpha-90: rgba(0, 0, 0, 0.9);
+	--color-text-alpha-80: rgba(0, 0, 0, 0.8);
+	--color-text-alpha-70: rgba(0, 0, 0, 0.7);
+	--color-text-alpha-60: rgba(0, 0, 0, 0.6);
+	--color-text-alpha-50: rgba(0, 0, 0, 0.5);
+	--color-text-alpha-40: rgba(0, 0, 0, 0.4);
+	--color-text-alpha-30: rgba(0, 0, 0, 0.3);
+	--color-text-alpha-20: rgba(0, 0, 0, 0.2);
+	--color-text-alpha-10: rgba(0, 0, 0, 0.1);
+	--color-text-alpha-03: rgba(0, 0, 0, 0.03);
+	--color-text-alpha-00: rgba(0, 0, 0, 0);
+
+	/* Rainbow: full spectrum, used as soft folder tints only (text stays neutral) */
+	--rainbow-color-01: hsl(0, 75%, 55%);
+	--rainbow-color-02: hsl(30, 75%, 55%);
+	--rainbow-color-03: hsl(60, 75%, 55%);
+	--rainbow-color-04: hsl(90, 75%, 55%);
+	--rainbow-color-05: hsl(120, 75%, 55%);
+	--rainbow-color-06: hsl(150, 75%, 55%);
+	--rainbow-color-07: hsl(180, 75%, 55%);
+	--rainbow-color-08: hsl(210, 75%, 55%);
+	--rainbow-color-09: hsl(240, 75%, 55%);
+	--rainbow-color-10: hsl(270, 75%, 55%);
+	--rainbow-color-11: hsl(300, 75%, 55%);
+	--rainbow-color-12: hsl(330, 75%, 55%);
+
+	--h1-color: hsl(calc(var(--accent-h) + -18), 60%, calc(var(--fantasy-light-l, 32%) + 8%));
+	--h2-color: hsl(calc(var(--accent-h) + -12), 60%, calc(var(--fantasy-light-l, 32%) + 4%));
+	--h3-color: hsl(calc(var(--accent-h) + -6), 60%, calc(var(--fantasy-light-l, 32%) + 6%));
+	--h4-color: hsl(calc(var(--accent-h) + 0), 60%, calc(var(--fantasy-light-l, 32%) + 8%));
+	--h5-color: hsl(calc(var(--accent-h) + 6), 60%, calc(var(--fantasy-light-l, 32%) + 4%));
+	--h6-color: hsl(calc(var(--accent-h) + 12), 60%, calc(var(--fantasy-light-l, 32%) + 6%));
+
+	--deco-bold-color: hsl(265, 85%, 50%);
+	--deco-highlight1-color: hsla(176, 85%, 50%, 0.7);
+	--deco-highlight2-color: hsla(300, 85%, 50%, 0.7);
+	--deco-highlight3-color: hsla(60, 85%, 50%, 0.7);
+
+	--canvas-color: var(--color-base-rgb-75);
+}
+
+/* Theme - Light Glass
+   White glass for every theme color. The theme color only tints the accent. */
+body.theme-light {
+	--fantasy-background-color-rgb: 251, 251, 253;
+	--highlight-color: hsla(calc(var(--accent-h) + 35), 90%, 72%, 0.4);
+	--color-accent-20: hsl(calc(var(--accent-h) + 20), 70%, var(--fantasy-light-l, 35%));
+	--color-accent-35: hsl(calc(var(--accent-h) + 35), 70%, var(--fantasy-light-l, 35%));
+	--text-muted: #5c5c5c;
+	--tab-text-color: var(--color-base-80);
+
+	/* Links and tags use the accent at the contrast-safe lightness */
+	--fantasy-light-accent: hsl(var(--accent-h), 70%, var(--fantasy-light-l, 35%));
+	--link-color: var(--fantasy-light-accent);
+	--link-color-hover: var(--fantasy-light-accent);
+	--link-external-color: var(--fantasy-light-accent);
+	--link-external-color-hover: var(--fantasy-light-accent);
+	--link-unresolved-color: var(--fantasy-light-accent);
+	--tag-color: var(--fantasy-light-accent);
+	--tag-color-hover: var(--fantasy-light-accent);
+	--tag-background: hsla(var(--accent-h), 70%, 50%, 0.1);
+	--tag-background-hover: hsla(var(--accent-h), 70%, 50%, 0.18);
+	--callout-border-opacity: 0.9;
+}
+
+/* Without the Fantasy accent, Obsidian's own accent hue is used: one safe lightness for all */
+body.theme-light:not(.fantasy-theme-accent) {
+	--fantasy-light-l: 36%;
+	--text-faint: var(--color-base-60);
+}
+
+body.theme-light .app-container {
+	--background-modifier-hover: rgba(0, 0, 0, 0.05);
+	--background-modifier-border: rgba(0, 0, 0, 0.08);
+	--background-modifier-form-field: rgba(255, 255, 255, 0.9);
+	--text-faint: #707070;
+}
+
+/* Dark without the Fantasy accent: Obsidian's accent hue at a pastel lightness (>= 4.5:1 on the dark glass) */
+body.theme-dark:not(.fantasy-theme-accent) {
+	--fantasy-dark-accent: hsl(var(--accent-h), 90%, 82%);
+	--color-accent-20: hsl(calc(var(--accent-h) + 20), 90%, 82%);
+	--color-accent-35: hsl(calc(var(--accent-h) + 35), 90%, 82%);
+	--link-color: var(--fantasy-dark-accent);
+	--link-color-hover: var(--fantasy-dark-accent);
+	--link-external-color: var(--fantasy-dark-accent);
+	--link-external-color-hover: var(--fantasy-dark-accent);
+	--link-unresolved-color: var(--fantasy-dark-accent);
+	--tag-color: var(--fantasy-dark-accent);
+	--tag-color-hover: var(--fantasy-dark-accent);
+}
+
+/* Dark tags: a deeper pill so the tag text keeps 4.5:1 */
+body.theme-dark {
+	--tag-background: hsla(var(--accent-h), 50%, 18%, 0.55);
+	--tag-background-hover: hsla(var(--accent-h), 50%, 24%, 0.6);
+}
+
+/* Dark callouts: white title text on the colored bar */
+body.theme-dark .callout-title,
+body.theme-dark .callout-icon .svg-icon {
+	color: #ffffff;
+}
+
+/* Light callouts: solid colored title with white text, soft colored frame */
+body.theme-light .callout-title,
+body.theme-light .callout-icon .svg-icon {
+	color: #ffffff;
+}
+
+/* Light rainbow folders: color as a soft tint, text and icons stay neutral */
+body.theme-light .nav-files-container>div>.tree-item.nav-folder .nav-folder-title,
+body.theme-light .workspace-leaf-content[data-type="bookmarks"]>.view-content>div>.tree-item .bookmark.mod-collapsible {
+	background-color: color-mix(in srgb, var(--rainbow-color) 14%, transparent);
+}
+
+body.theme-light .nav-files-container>div>.tree-item.nav-folder>.nav-folder-title,
+body.theme-light .workspace-leaf-content[data-type="bookmarks"]>.view-content>div>.tree-item>.bookmark.mod-collapsible {
+	background-color: color-mix(in srgb, var(--rainbow-color) 26%, transparent);
+}
+
+body.theme-light .nav-files-container .tree-item-self,
+body.theme-light:not(.is-grabbing) .nav-files-container .tree-item-self.is-clickable:hover,
+body.theme-light .workspace-leaf-content[data-type="bookmarks"] .tree-item-self,
+body.theme-light .nav-files-container>div>.tree-item .tree-item-icon,
+body.theme-light .nav-files-container>div>.tree-item .tree-item-icon svg {
+	color: var(--text-normal);
+}
+
+body.theme-light .status-bar,
+body.theme-light .app-container>.horizontal-main-container {
+	backdrop-filter: brightness(1.05) saturate(1.1) blur(12px);
+}
+
+/* Base - Cursor */
+.embedded-backlinks .search-result-file-match:hover,
+button.button-default:hover,
+.is-clickable:hover,
+.clickable-icon:hover {
+	cursor: pointer;
+}
+
+/* Base - Variables */
+.mod-fade {
+	--scroll-fade-offset-right: 0;
+	--scroll-fade-offset-left: 0;
+}
+
+body {
+	/* Custom Var */
+	--background-opacity1: calc(var(--background-opacity) + 0.1);
+	--background-opacity2: calc(var(--background-opacity) + 0.2);
+
+	--color-accent-20: hsl(calc(var(--accent-h) + 20), calc(var(--accent-s) + 25%), var(--accent-l));
+	--color-accent-35: hsl(calc(var(--accent-h) + 35), calc(var(--accent-s) + 25%), var(--accent-l));
+	--color-accent-35-opacity: hsl(calc(var(--accent-h) + 35), calc(var(--accent-s) + 25%), var(--accent-l), 0.6);
+
+	--blockquote-padding: 6px 6px 6px 10px;
+	--blockquote-border-radius: 4px;
+	--blockquote-background-font-size: 0.96em;
+	--blockquote-background-color: rgba(var(--fantasy-background-color-rgb), 0.2);
+	--blockquote2-color: var(--color-base-55);
+	--blockquote2-font-size: 0.93em;
+	--blockquote2-border-color: hsla(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 15%), 0.8);
+	--blockquote2-background-color: rgba(var(--fantasy-background-color-rgb), 0.4);
+
+	/* Obsidian Var */
+	--bold-color: var(--color-accent-20);
+	--italic-color: var(--color-accent-35);
+	--highlight-text-color: var(--color-base-200);
+	--highlight-color: var(--color-accent-35-opacity);
+	--u-del-color: var(--color-accent-20);
+	--inline-code-color: var(--color-accent-20);
+
+	--callout-padding: 0;
+	--callout-title-padding: 10px 0px 10px 8px;
+	--callout-content-padding: 10px;
+	--callout-border-width: 4px;
+	--callout-border-opacity: 0.6;
+	--callout-content-background: rgba(var(--fantasy-background-color-rgb), calc(var(--callout-border-opacity) - 0.4));
+
+	--divider-color: var(--color-base-55);
+
+	--font-ui-small: 13.5px;
+	--file-line-width: 850px;
+
+	--h1-size: 1.3em;
+	--h2-size: 1.2em;
+	--h3-size: 1.15em;
+	--h4-size: 1.1em;
+	--h5-size: 1.05em;
+	--h6-size: 1.05em;
+	--heading-spacing: calc(var(--p-spacing) * 2.5);
+
+	--tab-text-color: var(--text-muted);
+	--tab-text-color-focused-active-current: var(--h1-color);
+	--tab-divider-color: transparent;
+	--tab-width: 180px;
+
+	--text-normal: var(--color-base-80);
+
+	--list-indent: 1.5em;
+	--link-decoration: none;
+
+	--p-spacing: 0.5rem;
+
+	/* Custom Var */
+	--p-spacing-Orin: var(--p-spacing);
+	background-color: rgba(var(--fantasy-background-color-rgb), 0.3);
+}
+
+.is-translucent:not(.is-fullscreen) .app-container,
+body .app-container {
+	background-image: var(--background-url);
+	background-size: cover;
+
+	--background-primary: rgba(var(--fantasy-background-color-rgb), var(--background-opacity));
+	--background-primary-alt: rgba(var(--fantasy-background-color-rgb), var(--background-opacity2));
+	--background-secondary: rgba(var(--fantasy-background-color-rgb), var(--background-opacity));
+	--background-modifier-hover: var(--background-primary);
+	--background-modifier-border: var(--background-primary-alt);
+	--background-modifier-form-field: var(--background-secondary);
+
+	--search-result-background: var(--background-primary);
+	--text-faint: var(--color-base-60);
+
+	--titlebar-background: var(--background-secondary);
+	--tab-container-background: var(--background-secondary);
+	--tab-background-active: var(--background-secondary);
+	--ribbon-background: var(--background-secondary);
+
+	--nav-heading-color-collapsed: var(--text-faint);
+	--nav-collapse-icon-color: rgba(var(--mono-rgb-100), 1);
+
+	--code-background: var(--background-primary);
+}
+
+.status-bar,
+.app-container>.horizontal-main-container {
+	backdrop-filter: brightness(0.8) blur(8px);
+}
+
+/* Translucent window (Settings → Appearance) looks the same as without it, in both layouts.
+   Obsidian's app.css clears the body, tints .app-container and makes panels transparent
+   (the panels with !important, which only another !important can beat); give back exactly
+   what the theme paints without it. */
+body.is-translucent {
+	background-color: rgba(var(--fantasy-background-color-rgb), 0.3);
+}
+
+.is-translucent:not(.is-fullscreen) .app-container {
+	background-color: transparent;
+}
+
+/* Title bar (shown in the separate settings window): plain, as without the translucent window */
+.is-translucent:not(.is-fullscreen) .titlebar {
+	background-color: var(--titlebar-background);
+}
+
+body:not(.fantasy-theme-card-off).is-translucent:not(.is-fullscreen) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+	background-color: var(--background-primary) !important;
+}
+
+/* Card layout off: the top-level panels keep their glass */
+.fantasy-theme-card-off.is-translucent:not(.is-fullscreen) .workspace>.workspace-split {
+	background-color: var(--tab-container-background) !important;
+}
+
+.fantasy-theme-card-off.is-translucent:not(.is-fullscreen) .workspace>.workspace-split.mod-root,
+.fantasy-theme-card-off.is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-primary:before {
+	background-color: var(--background-primary) !important;
+}
+
+.fantasy-theme-card-off.is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-primary,
+.fantasy-theme-card-off .workspace-ribbon {
+	background-color: var(--ribbon-background) !important;
+}
+
+.is-translucent:not(.is-fullscreen) {
+	--nav-collapse-icon-color: rgba(var(--mono-rgb-100), 1);
+	--nav-collapse-icon-color-collapsed: rgba(var(--mono-rgb-100), 1);
+	--divider-color: var(--color-base-55);
+}
+
+.mod-sidedock .workspace-tab-header-container,
+.mod-sidedock .workspace-tabs .workspace-leaf,
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
+.mod-root .workspace-tab-header-container,
+.mod-root .workspace-tabs .workspace-leaf,
+.mod-root .view-header,
+.workspace-split.mod-root .view-content,
+.mod-root .workspace-split,
+.is-focused .workspace-leaf.mod-active .view-header,
+.mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
+	background-color: transparent;
+}
+
+.workspace-tab-header::before,
+.workspace-tab-header::after,
+.mod-fade:not(.mod-at-end):after {
+	display: none;
+}
+
+body.is-focused .workspace-ribbon.mod-primary {
+	--titlebar-background: var(--background-secondary);
+}
+
+.workspace-tab-header {
+	box-shadow: 0 0 0 var(--tab-outline-width) var(--tab-outline-color);
+}
+
+.mod-root .workspace-tab-header.is-active {
+	border-bottom: 1px solid var(--divider-color);
+}
+
+.mod-left-split .workspace-tab-header-container-inner,
+.mod-right-split .workspace-tab-header-container-inner {
+	padding: 0px;
+}
+
+.mod-left-split .workspace-tab-header,
+.mod-right-split .workspace-tab-header {
+	border-radius: var(--radius-s) var(--radius-s) 0 0;
+}
+
+/* Layout - Card View (on by default; body.fantasy-theme-card-off turns it off) */
+body:not(.fantasy-theme-card-off) {
+	--cardview-gap: 4px;
+	--cardview-gap2: calc(var(--cardview-gap) * 2);
+	--cardview-gap-padding: calc(var(--cardview-gap) * 2);
+	--cardview-margin: var(--cardview-gap);
+	--cardview-radius: 20px;
+	--cardview-padding: 10px 5px;
+	--divider-width-hover: var(--cardview-gap);
+
+	--ribbon-padding: 0px;
+	/* 36px buttons + 8px left gap + 4px right gap. auto breaks --frame-left-space */
+	--ribbon-width: 48px;
+
+	--tab-outline-color: transparent;
+}
+
+body:not(.fantasy-theme-card-off),
+body.is-translucent:not(.is-fullscreen):not(.fantasy-theme-card-off) {
+	--ribbon-background: transparent;
+}
+
+/* Left sidebar collapsed: Obsidian paints the ribbon with --ribbon-background-collapsed. In card
+   layout keep it transparent as with the sidebar open (the buttons sit on their own card). */
+body:not(.fantasy-theme-card-off) .workspace-ribbon {
+	--ribbon-background-collapsed: transparent;
+}
+
+.is-translucent .workspace,
+.workspace {
+	background-color: rgba(var(--fantasy-background-color-rgb), 0.3);
+}
+
+body:not(.fantasy-theme-card-off) .workspace-tab-header-container-inner {
+	margin-top: 1px;
+}
+
+/* Strip above the ribbon (next to the traffic lights) */
+body:not(.fantasy-theme-card-off) .workspace-ribbon.mod-primary::before,
+.is-translucent:not(.is-fullscreen):not(.fantasy-theme-card-off) .workspace-ribbon.mod-primary::before {
+	background-color: transparent;
+}
+
+body:not(.fantasy-theme-card-off) .mod-sidedock.mod-left-split {
+	padding-left: var(--cardview-gap);
+}
+
+body:not(.fantasy-theme-card-off) .workspace .side-dock-ribbon.mod-primary {
+	padding-left: var(--cardview-gap2);
+	padding-right: var(--cardview-gap);
+}
+
+body:not(.fantasy-theme-card-off) .workspace-split.mod-vertical.mod-root>div,
+body:not(.fantasy-theme-card-off) .mod-sidedock.mod-left-split {
+	padding-right: calc(var(--cardview-gap) + var(--divider-width-hover));
+}
+
+body:not(.fantasy-theme-card-off) .mod-sidedock.mod-right-split {
+	padding-left: calc(var(--cardview-gap) + var(--divider-width-hover));
+}
+
+body:not(.fantasy-theme-card-off) .mod-root {
+	padding-right: var(--cardview-gap);
+	padding-left: var(--cardview-gap);
+}
+
+body:not(.fantasy-theme-card-off) .workspace:not(.is-right-sidedock-open) .mod-root,
+body:not(.fantasy-theme-card-off) .mod-sidedock.mod-right-split {
+	padding-right: var(--cardview-gap2);
+}
+
+body:not(.fantasy-theme-card-off) .mod-sidedock.mod-left-split .workspace-tabs,
+body:not(.fantasy-theme-card-off) .mod-sidedock.mod-right-split .workspace-tabs {
+	padding-bottom: calc(var(--cardview-gap) + var(--divider-width-hover));
+}
+
+body:not(.fantasy-theme-card-off) .workspace-split.mod-vertical.mod-root>div:last-of-type {
+	padding-right: 0
+}
+
+/* Left sidebar collapsed: the split comes before the root (sibling), the ribbon gets is-collapsed */
+body:not(.fantasy-theme-card-off) .mod-left-split.is-sidedock-collapsed~.mod-root {
+	padding-left: 0
+}
+
+body:not(.fantasy-theme-card-off) .side-dock-ribbon.mod-primary.is-collapsed {
+	margin-right: var(--cardview-gap);
+}
+
+body:not(.fantasy-theme-card-off) .mod-sidedock.mod-right-split .workspace-tabs:last-of-type {
+	padding-bottom: 0;
+}
+
+body:not(.fantasy-theme-card-off) .workspace-split,
+body:not(.fantasy-theme-card-off) .workspace-ribbon,
+.is-translucent:not(.is-fullscreen):not(.fantasy-theme-card-off) .workspace-ribbon.mod-primary,
+.is-translucent:not(.is-fullscreen):not(.fantasy-theme-card-off) .mod-root .workspace-tabs {
+	background-color: transparent;
+	border: 0;
+}
+
+body:not(.fantasy-theme-card-off) .side-dock-actions {
+	padding: var(--cardview-gap2) var(--cardview-gap);
+	border-radius: var(--cardview-radius);
+}
+
+/* Vault profile: its own glass card in card layout; with cards off it sits on the sidebar glass */
+body:not(.fantasy-theme-card-off):not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
+body:not(.fantasy-theme-card-off) .workspace-tab-container {
+	border-radius: var(--cardview-radius);
+}
+
+body:not(.fantasy-theme-card-off):not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
+body:not(.fantasy-theme-card-off) .workspace-tab-container,
+body:not(.fantasy-theme-card-off) .side-dock-actions {
+	background-color: var(--background-primary);
+}
+
+/* Sidebar toggles: same plate as the sidebar tab icons (28x26, radius 8, top 7) */
+body:not(.fantasy-theme-card-off) .sidebar-toggle-button,
+.mod-macos.is-hidden-frameless:not(.is-popout-window, .is-mobile) .mod-sidedock .sidebar-toggle-button.mod-secondary {
+	background-color: transparent;
+	padding-top: 7px;
+}
+
+body:not(.fantasy-theme-card-off) .sidebar-toggle-button .clickable-icon {
+	height: 26px;
+	padding: 0 6px;
+	border-radius: 8px;
+	background-color: var(--background-primary);
+}
+
+/* Tab row starts at the card's corner radius */
+body:not(.fantasy-theme-card-off) .workspace-tab-header-container {
+	padding-inline-start: var(--cardview-radius);
+}
+
+body:not(.fantasy-theme-card-off) .mod-sidedock .workspace-tab-header-container {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+body:not(.fantasy-theme-card-off) .mod-root .workspace-tab-header-container .workspace-tab-header-container-inner {
+	gap: calc(var(--cardview-gap) * 2);
+}
+
+body:not(.fantasy-theme-card-off) .workspace-split {
+	gap: var(--cardview-gap);
+}
+
+body:not(.fantasy-theme-card-off) .workspace-tab-header-container,
+body:not(.fantasy-theme-card-off) .workspace-leaf-resize-handle {
+	border-color: transparent;
+	border-width: 0px;
+}
+
+body:not(.fantasy-theme-card-off) .mod-root .mod-vertical>.workspace-tabs {
+	padding-right: calc(var(--cardview-gap) + var(--divider-width-hover));
+}
+
+body:not(.fantasy-theme-card-off) .mod-root .mod-vertical>.workspace-tabs:last-of-type {
+	padding-right: 0px;
+}
+
+body:not(.fantasy-theme-card-off) .mod-root .mod-horizontal>.workspace-tabs {
+	padding-bottom: calc(var(--cardview-gap) + var(--divider-width-hover));
+}
+
+body:not(.fantasy-theme-card-off) .mod-root .mod-horizontal>div:last-of-type,
+body:not(.fantasy-theme-card-off) .mod-root .mod-horizontal>.workspace-tabs:last-of-type {
+	padding-bottom: 0px;
+}
+
+body:not(.fantasy-theme-card-off) .mod-root .mod-horizontal>.mod-vertical {
+	padding-bottom: calc(var(--cardview-gap) + var(--divider-width-hover));
+}
+
+body:not(.fantasy-theme-card-off) .mod-root .workspace-tab-header {
+	padding: 0;
+}
+
+body:not(.fantasy-theme-card-off) .workspace-tab-header {
+	background-color: rgba(var(--fantasy-background-color-rgb), calc(var(--background-opacity) - 0.3));
+}
+
+body:not(.fantasy-theme-card-off) .mod-root .workspace-tab-header.is-active {
+	background-color: var(--tab-background-active);
+	border-bottom: 1px solid var(--color-base-40);
+}
+
+body:not(.fantasy-theme-card-off) .workspace-tabs .workspace-tab-container {
+	padding: var(--cardview-padding);
+}
+
+.workspace-split.mod-vertical.mod-root,
+.workspace-split.mod-horizontal.mod-sidedock.mod-right-split,
+.workspace-split.mod-horizontal.mod-sidedock.mod-left-split {
+	padding-bottom: var(--cardview-gap2, 5px);
+}
+
+/* Editor - Reading View */
+.markdown-preview-view {
+	/* Obsidian Var */
+	--blockquote-border-thickness: 4px;
+}
+
+/* Editor - Headings & Typography */
+h1,
+.markdown-rendered h1 {
+	--p-spacing: var(--h1-size);
+	--heading-spacing: calc(var(--p-spacing) * 1.5);
+}
+
+h2,
+.markdown-rendered h2 {
+	--p-spacing: var(--h2-size);
+	--heading-spacing: calc(var(--p-spacing) * 1.5);
+}
+
+h3,
+.markdown-rendered h3 {
+	--p-spacing: var(--h3-size);
+	--heading-spacing: calc(var(--p-spacing) * 1.5);
+}
+
+h4,
+.markdown-rendered h4 {
+	--p-spacing: var(--h4-size);
+	--heading-spacing: calc(var(--p-spacing) * 1.5);
+}
+
+h5,
+.markdown-rendered h5 {
+	--p-spacing: var(--h5-size);
+	--heading-spacing: calc(var(--p-spacing) * 1.5);
+}
+
+h6,
+.markdown-rendered h6 {
+	--p-spacing: var(--h6-size);
+	--heading-spacing: calc(var(--p-spacing) * 1.5);
+}
+
+h1,
+.markdown-rendered h1,
+h2,
+.markdown-rendered h2,
+h3,
+.markdown-rendered h3,
+h4,
+.markdown-rendered h4,
+h5,
+.markdown-rendered h5 {
+	margin-bottom: var(--p-spacing);
+}
+
+span.cm-formatting.cm-formatting-header {
+	color: inherit;
+}
+
+.excalidraw__embeddable-container .canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view .markdown-preview-pusher+div>*:first-child[data-level="2"],
+.markdown-rendered h2,
+.HyperMD-header.HyperMD-header-2.cm-line {
+	display: flex;
+	align-items: center;
+}
+
+.excalidraw__embeddable-container .canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view .markdown-preview-pusher+div>*:first-child[data-level="2"]::after,
+.HyperMD-header.HyperMD-header-2.cm-line::after,
+h2::after {
+	content: "";
+	background-color: var(--h2-color);
+	height: 1px;
+	margin: 3px 0px 0px 15px;
+	flex-grow: 1;
+}
+
+.kanban-plugin h3,
+.markdown-rendered h3 {
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+	padding-bottom: 0px;
+	border-bottom: 2px solid;
+	border-image-slice: 10;
+	border-image-source: linear-gradient(to right, var(--rainbow-color-03) 20%, rgba(0, 0, 0, 0));
+	;
+}
+
+span.suggestion-highlight,
+.suggestion-highlight,
+.suggestion-item.mod-complex .suggestion-highlight,
+b,
+strong,
+.cm-strong,
+.cm-strong.cm-highlight,
+.cm-s-obsidian span.cm-quote.cm-strong,
+.cm-strong,
+strong mark {
+	color: var(--bold-color);
+	font-weight: normal;
+}
+
+.kanban-plugin mark,
+.cm-s-obsidian span.cm-highlight,
+.markdown-rendered mark {
+	box-shadow: inset 0 -7px 0px var(--highlight-color);
+	text-decoration: none;
+	color: var(--highlight-text-color);
+	background-color: transparent;
+}
+
+.markdown-rendered blockquote strong mark {
+	color: var(--bold-color);
+}
+
+.markdown-rendered mark .internal-link {
+	color: var(--link-color);
+}
+
+i,
+em {
+	color: var(--italic-color);
+}
+
+.markdown-rendered i::before,
+.markdown-rendered em::before {
+	content: '🤔';
+	font-style: initial;
+}
+
+.markdown-rendered code,
+.cm-s-obsidian span.cm-inline-code {
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	color: var(--inline-code-color);
+}
+
+u,
+del {
+	text-decoration-color: var(--u-del-color);
+	text-decoration-thickness: 2px;
+}
+
+.hr.cm-line hr,
+.markdown-preview-section hr {
+	--hr-color: var(--color-text-alpha-20);
+}
+
+/* Editor - Blockquote */
+.markdown-rendered blockquote {
+	padding: var(--blockquote-padding);
+	border-radius: var(--blockquote-border-radius);
+	font-size: var(--blockquote-background-font-size);
+}
+
+.markdown-rendered blockquote p:first-child {
+	color: var(--bold-color);
+}
+
+.markdown-rendered blockquote blockquote p:first-child {
+	color: inherit;
+	font-style: italic;
+}
+
+.markdown-rendered blockquote blockquote {
+	position: relative;
+	padding-left: 30px;
+	color: var(--blockquote2-color);
+	background-color: var(--blockquote2-background-color);
+}
+
+.markdown-rendered blockquote blockquote,
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.HyperMD-quote-2.cm-line .cm-blockquote-border:before {
+	border-color: var(--blockquote2-border-color);
+	font-size: var(--blockquote2-font-size);
+}
+
+.markdown-rendered blockquote blockquote:before {
+	font-family: Arial;
+	content: "\201C";
+	color: var(--blockquote2-border-color);
+	font-size: 3em;
+	position: absolute;
+	left: 10px;
+	top: -10px;
+}
+
+/* Editor - Table Style */
+.markdown-rendered table {
+	height: fit-content;
+	background-color: var(--color-bg-alpha-10);
+	border-top: 2px solid var(--color-text-alpha-40);
+	border-bottom: 2px solid var(--color-text-alpha-40);
+}
+
+.markdown-rendered th,
+.markdown-rendered td {
+	text-align: center;
+	padding: 4px 15px;
+}
+
+.markdown-rendered thead {
+	background-color: var(--color-bg-alpha-20);
+	border-bottom-style: double;
+}
+
+th:first-child,
+td:first-child {
+	border-left: 0;
+}
+
+th:last-child,
+td:last-child {
+	border-right: 0;
+}
+
+.markdown-rendered tbody tr:nth-child(2n+1) {
+	background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Editor - LaTeX */
+span.math {
+	width: 100%;
+	display: block;
+	font-size: 2rem;
+	text-align: center;
+	color: var(--color-accent-35);
+}
+
+/* Editor - Task */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox {
+	margin-inline-end: 0.5em;
+}
+
+/* Obsidian - File Navigation
+   Icons: Lucide (https://lucide.dev), ISC License. See LICENSE. */
+.nav-file .nav-file-title[data-path]::before {
+	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round' %3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3C/svg%3E");
+	-webkit-mask-repeat: no-repeat;
+	background-color: currentColor;
+	content: "";
+	display: inline-flex;
+	flex-shrink: 0;
+	height: 16px;
+	width: 16px;
+	margin-right: 5px;
+}
+
+.nav-file .nav-file-title[data-path$=".md"]::before {
+	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round' %3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Cpath d='M10 9H8'/%3E%3Cpath d='M16 13H8'/%3E%3Cpath d='M16 17H8'/%3E%3C/svg%3E");
+	-webkit-mask-repeat: no-repeat;
+}
+
+.nav-file .nav-file-title[data-path$=".pdf"]::before {
+	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round' %3E%3Cpath d='M12 7v14'/%3E%3Cpath d='M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z'/%3E%3C/svg%3E");
+	-webkit-mask-repeat: no-repeat;
+}
+
+.nav-file .nav-file-title[data-path$=".canvas"]::before {
+	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round' %3E%3Crect width='7' height='9' x='3' y='3' rx='1'/%3E%3Crect width='7' height='5' x='14' y='3' rx='1'/%3E%3Crect width='7' height='9' x='14' y='12' rx='1'/%3E%3Crect width='7' height='5' x='3' y='16' rx='1'/%3E%3C/svg%3E");
+	-webkit-mask-repeat: no-repeat;
+}
+
+.nav-file .nav-file-title[data-path$=".excalidraw.md"]::before,
+.nav-file .nav-file-title[data-path$=".excalidraw"]::before {
+	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round' %3E%3Cpath d='M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13'/%3E%3Cpath d='m8 6 2-2'/%3E%3Cpath d='m18 16 2-2'/%3E%3Cpath d='m17 11 4.3 4.3c.94.94.94 2.46 0 3.4l-2.6 2.6c-.94.94-2.46.94-3.4 0L11 17'/%3E%3Cpath d='M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z'/%3E%3Cpath d='m15 5 4 4'/%3E%3C/svg%3E");
+	-webkit-mask-repeat: no-repeat;
+}
+
+.nav-file .nav-file-title[data-path$=".svg"]::before,
+.nav-file .nav-file-title[data-path$=".bmp"]::before,
+.nav-file .nav-file-title[data-path$=".jpg"]::before,
+.nav-file .nav-file-title[data-path$=".gif"]::before,
+.nav-file .nav-file-title[data-path$=".webp"]::before,
+.nav-file .nav-file-title[data-path$=".jpeg"]::before,
+.nav-file .nav-file-title[data-path$=".png"]::before {
+	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round' %3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Ccircle cx='10' cy='12' r='2'/%3E%3Cpath d='m20 17-1.296-1.296a2.41 2.41 0 0 0-3.408 0L9 22'/%3E%3C/svg%3E");
+	-webkit-mask-repeat: no-repeat;
+}
+
+.nav-file .nav-file-title[data-path$=".mp3"]::before,
+.nav-file .nav-file-title[data-path$=".wav"]::before,
+.nav-file .nav-file-title[data-path$=".m4a"]::before,
+.nav-file .nav-file-title[data-path$=".ogg"]::before,
+.nav-file .nav-file-title[data-path$=".flac"]::before {
+	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round' %3E%3Cpath d='M17.5 22h.5a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Cpath d='M2 19a2 2 0 1 1 4 0v1a2 2 0 1 1-4 0v-4a6 6 0 0 1 12 0v4a2 2 0 1 1-4 0v-1a2 2 0 1 1 4 0'/%3E%3C/svg%3E");
+	-webkit-mask-repeat: no-repeat;
+}
+
+.nav-file .nav-file-title[data-path$=".3gp"]::before,
+.nav-file .nav-file-title[data-path$=".webm"]::before,
+.nav-file .nav-file-title[data-path$=".mp4"]::before,
+.nav-file .nav-file-title[data-path$=".ogv"]::before,
+.nav-file .nav-file-title[data-path$=".mov"]::before,
+.nav-file .nav-file-title[data-path$=".mkv"]::before {
+	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round' %3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Cpath d='m10 11 5 3-5 3v-6Z'/%3E%3C/svg%3E");
+	-webkit-mask-repeat: no-repeat;
+}
+
+.nav-file-title::before {
+	margin-left: -19px;
+}
+
+.nav-file-title,
+.nav-folder-title {
+	align-items: flex-start;
+}
+
+.tree-item {
+	margin-bottom: 4px;
+}
+
+.nav-file-title.is-active {
+	background-color: hsla(var(--accent-hsl), 0.3);
+}
+
+/* Obsidian - Rainbow Folder */
+
+/* Space after a bookmark group: on the group's last child (collapsed: its title, open: its children);
+   the margin collapses through the group, same as a margin on the group itself */
+.workspace-leaf-content[data-type="bookmarks"]>.view-content>div>.tree-item>.bookmark.mod-collapsible:last-child,
+.workspace-leaf-content[data-type="bookmarks"]>.view-content>div>.tree-item>.bookmark.mod-collapsible+.tree-item-children {
+	margin-bottom: 8px;
+}
+
+/* Rainbow colors: every top-level bookmark gets one; plain bookmarks reset it on their own row below */
+
+.workspace-leaf-content[data-type="bookmarks"]>.view-content>div>.tree-item:nth-child(12n+3),
+.nav-files-container>div>.tree-item.nav-folder:nth-child(12n+2) {
+	--rainbow-color: var(--rainbow-color-01);
+}
+
+.workspace-leaf-content[data-type="bookmarks"]>.view-content>div>.tree-item:nth-child(12n+4),
+.nav-files-container>div>.tree-item.nav-folder:nth-child(12n+3) {
+	--rainbow-color: var(--rainbow-color-02);
+}
+
+.workspace-leaf-content[data-type="bookmarks"]>.view-content>div>.tree-item:nth-child(12n+5),
+.nav-files-container>div>.tree-item.nav-folder:nth-child(12n+4) {
+	--rainbow-color: var(--rainbow-color-03);
+}
+
+.workspace-leaf-content[data-type="bookmarks"]>.view-content>div>.tree-item:nth-child(12n+6),
+.nav-files-container>div>.tree-item.nav-folder:nth-child(12n+5) {
+	--rainbow-color: var(--rainbow-color-04);
+}
+
+.workspace-leaf-content[data-type="bookmarks"]>.view-content>div>.tree-item:nth-child(12n+7),
+.nav-files-container>div>.tree-item.nav-folder:nth-child(12n+6) {
+	--rainbow-color: var(--rainbow-color-05);
+}
+
+.workspace-leaf-content[data-type="bookmarks"]>.view-content>div>.tree-item:nth-child(12n+8),
+.nav-files-container>div>.tree-item.nav-folder:nth-child(12n+7) {
+	--rainbow-color: var(--rainbow-color-06);
+}
+
+.workspace-leaf-content[data-type="bookmarks"]>.view-content>div>.tree-item:nth-child(12n+9),
+.nav-files-container>div>.tree-item.nav-folder:nth-child(12n+8) {
+	--rainbow-color: var(--rainbow-color-07);
+}
+
+.workspace-leaf-content[data-type="bookmarks"]>.view-content>div>.tree-item:nth-child(12n+10),
+.nav-files-container>div>.tree-item.nav-folder:nth-child(12n+9) {
+	--rainbow-color: var(--rainbow-color-08);
+}
+
+.workspace-leaf-content[data-type="bookmarks"]>.view-content>div>.tree-item:nth-child(12n+11),
+.nav-files-container>div>.tree-item.nav-folder:nth-child(12n+10) {
+	--rainbow-color: var(--rainbow-color-09);
+}
+
+.workspace-leaf-content[data-type="bookmarks"]>.view-content>div>.tree-item:nth-child(12n+12),
+.nav-files-container>div>.tree-item.nav-folder:nth-child(12n+11) {
+	--rainbow-color: var(--rainbow-color-10);
+}
+
+.workspace-leaf-content[data-type="bookmarks"]>.view-content>div>.tree-item:nth-child(12n+13),
+.nav-files-container>div>.tree-item.nav-folder:nth-child(12n+12) {
+	--rainbow-color: var(--rainbow-color-11);
+}
+
+.workspace-leaf-content[data-type="bookmarks"]>.view-content>div>.tree-item:nth-child(12n+14),
+.nav-files-container>div>.tree-item.nav-folder:nth-child(12n+13) {
+	--rainbow-color: var(--rainbow-color-12);
+}
+
+.workspace-leaf-content[data-type="bookmarks"] .tree-item-self:not(.mod-collapsible),
+.nav-files-container>div>.tree-item.nav-file,
+.nav-files-container .nav-file-title {
+	--rainbow-color: var(--color-base-70);
+}
+
+.bookmark.tree-item-self,
+body:not(.is-grabbing) .bookmark.tree-item-self.is-clickable:hover,
+.workspace-leaf-content[data-type="bookmarks"] .tree-item-self .tree-item-icon,
+.workspace-leaf-content[data-type="bookmarks"] .tree-item-self .tree-item-icon svg,
+.nav-files-container .tree-item-self,
+body:not(.is-grabbing) .nav-files-container .tree-item-self.is-clickable:hover,
+.nav-files-container>div>.tree-item .tree-item-icon,
+.nav-files-container>div>.tree-item .tree-item-icon svg {
+	color: var(--rainbow-color);
+}
+
+/* Obsidian - Image (fade edges) */
+img {
+	--img-mask: 3px;
+}
+
+.picture img {
+	--img-mask: 15px;
+}
+
+/* Note body only: image views, hover popovers and Hover Editor zoom keep their own size. */
+.markdown-rendered img,
+.markdown-source-view.mod-cm6 img,
+.excalidraw-svg .excalidraw-svg.excalidraw-embedded-img {
+	max-width: 100%;
+	max-height: 30vh;
+}
+
+.excalidraw-svg .excalidraw-svg.excalidraw-embedded-img {
+	padding: 10px;
+}
+
+.excalidraw-svg .excalidraw-svg.excalidraw-embedded-img {
+	background-color: var(--color-text-alpha-10);
+}
+
+.workspace-leaf-content[data-type="markdown"] img,
+.workspace-leaf-content[data-type="excalidraw"] img {
+	-webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) calc(100% - var(--img-mask)), rgba(0, 0, 0, 0) 100%),
+		linear-gradient(to top, rgba(0, 0, 0, 1) calc(100% - var(--img-mask)), rgba(0, 0, 0, 0) 100%),
+		linear-gradient(to right, rgba(0, 0, 0, 1) calc(100% - var(--img-mask)), rgba(0, 0, 0, 0) 100%),
+		linear-gradient(to left, rgba(0, 0, 0, 1) calc(100% - var(--img-mask)), rgba(0, 0, 0, 0) 100%);
+	-webkit-mask-composite: destination-in;
+}
+
+.image-captions-figure {
+	margin: 0px auto;
+}
+
+.image-captions-caption {
+	display: none;
+}
+
+/* Obsidian - Properties */
+.metadata-container {
+	margin-bottom: 40px;
+}
+
+/* Obsidian - Graph View */
+.graph-view.color-fill-unresolved {
+	color: rgb(255, 0, 0);
+	opacity: 1.0;
+}
+
+/* Obsidian - Embedded Backlinks */
+.embedded-backlinks .tree-item.search-result {
+	border-radius: var(--blockquote-border-radius);
+}
+
+.embedded-backlinks .tree-item-self.search-result-file-title.is-clickable {
+	--nav-collapse-icon-color: var(--color-accent);
+	--nav-item-color-hover: var(--color-accent);
+	padding: 15px 10px 0px 20px;
+	color: var(--color-accent);
+	font-size: 1rem;
+}
+
+.embedded-backlinks .search-result-file-matches {
+	box-shadow: initial;
+}
+
+.embedded-backlinks .search-result-file-match,
+.embedded-backlinks .search-result-file-match a {
+	font-size: 0.95rem;
+}
+
+.backlink-pane ul.has-list-bullet {
+	font-size: var(--nav-item-size);
+}
+
+.backlink-pane ul.has-list-bullet,
+.embedded-backlinks .search-results-children.is-rendered ul {
+	padding-inline-start: 0px;
+}
+
+.embedded-backlinks span.search-result-file-matched-text {
+	background-color: initial;
+	box-shadow: inset 0 -7px 0 var(--highlight-color);
+	color: var(--highlight-text-color);
+}
+
+.embedded-backlinks .search-result-file-match .markdown-preview-sizer.markdown-preview-section {
+	font-size: 0.9rem;
+}
+
+/* Obsidian - Status Bar */
+.status-bar {
+	position: static;
+	--status-bar-background: rgba(var(--fantasy-background-color-rgb), var(--background-opacity2));
+}
+
+/* Obsidian - Markdown Embed */
+.internal-embed.markdown-embed.inline-embed.is-loaded .markdown-embed-title,
+.internal-embed.markdown-embed.inline-embed.is-loaded .markdown-preview-section h1,
+.internal-embed.markdown-embed.inline-embed.is-loaded .markdown-preview-section h2,
+.internal-embed.markdown-embed.inline-embed.is-loaded .markdown-preview-section h3,
+.internal-embed.markdown-embed.inline-embed.is-loaded .markdown-preview-section h4,
+.internal-embed.markdown-embed.inline-embed.is-loaded .markdown-preview-section h5,
+.internal-embed.markdown-embed.inline-embed.is-loaded .markdown-preview-section h6,
+.internal-embed.markdown-embed.inline-embed.is-loaded .inline-title,
+.internal-embed.markdown-embed.inline-embed.is-loaded .mod-header {
+	display: none;
+}
+
+/* Utility - Line */
+.markdown-rendered .line,
+.line {
+	display: flex;
+	margin: 15px 0px;
+	align-items: center;
+}
+
+.markdown-rendered .line::before,
+.line::before,
+.markdown-rendered .line::after,
+.line::after {
+	content: "";
+	min-width: 10%;
+	flex-grow: 1;
+	margin: 0px 15px 0px 0px;
+	background: var(--color-text-alpha-30);
+	;
+	height: 1px;
+	font-size: 0px;
+	line-height: 0px
+}
+
+.markdown-rendered .line::after,
+.line::after {
+	margin: 0px 0px 0px 15px;
+}
+
+/* CSS Classes - Wide */
+.wide {
+	--file-line-width: 2800px;
+}
+
+.wide-full {
+	--file-line-width: 100%;
+}
+
+/* Editor - Table wrapper */
+.table-wrapper .cm-content.cm-lineWrapping {
+	padding-bottom: 0px;
+}
+
+/* Plugin - Hover Editor */
+.suggestion-container,
+.popover {
+	--popover-opacity: calc(var(--background-opacity) + 0.45);
+	--background-primary: rgba(var(--fantasy-background-color-rgb), var(--popover-opacity));
+	--background-secondary: rgba(var(--fantasy-background-color-rgb), var(--popover-opacity));
+	--tab-container-background: var(--background-secondary);
+	--he-title-bar-inactive-bg: var(--color-base-50);
+	--he-title-bar-inactive-pinned-bg: var(--color-base-50);
+	--he-title-bar-active-pinned-bg: var(--color-base-50);
+	background-color: var(--background-secondary);
+}
+
+.suggestion-container {
+	z-index: 200;
+}
+
+.popover.hover-editor {
+	background-color: var(--background-primary);
+}
+
+/* Obsidian - Canvas */
+
+.canvas-wrapper {
+	background-color: transparent;
+	--canvas-card-label-color: var(--canvas-color);
+	--canvas-dot-pattern: var(--color-base-50);
+	--canvas-color-1: var(--color-red-rgb);
+	--canvas-color-2: var(--color-orange-rgb);
+	--canvas-color-3: var(--color-yellow-rgb);
+	--canvas-color-4: var(--color-green-rgb);
+	--canvas-color-5: var(--color-cyan-rgb);
+	--canvas-color-6: var(--color-purple-rgb);
+}
+
+.canvas-wrapper .canvas-node-placeholder::after {
+	background-color: transparent;
+}
+
+.canvas-node-content.markdown-embed .markdown-preview-sizer.markdown-preview-section>div:nth-child(2) {
+	font-size: 1.5rem;
+	color: var(--h1-color);
+	font-weight: 600;
+}
+
+.canvas-node-container .markdown-embed-content .markdown-embed {
+	border-left: none;
+}
+
+.canvas-node-content .markdown-embed-content .markdown-embed .markdown-preview-sizer.markdown-preview-section {
+	padding-right: 20px;
+}
+
+.canvas-node-container .markdown-embed-content .markdown-embed .markdown-rendered ul {
+	padding-inline-start: 10px;
+}
+
+/* Obsidian - Task list */
+ul.contains-task-list {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+/* Obsidian - Callout */
+.callout-title {
+	--input-height: 20px;
+	/* Obsidian 1.14: --callout-color is a full color, not an RGB triplet */
+	background: color-mix(in srgb, var(--callout-color) calc(var(--callout-border-opacity) * 100%), transparent);
+}
+
+.callout-title,
+.callout-icon .svg-icon {
+	color: var(--color-base-90);
+}
+
+.callout-content {
+	border-radius: var(--callout-radius);
+}
