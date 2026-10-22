@@ -1295,9 +1295,48 @@ img {
 	display: none;
 }
 
-/* Obsidian - Properties */
+/* Obsidian - Properties: a small glass tray, tinted with the accent hue (Obsidian's metadata variables) */
+body {
+	--metadata-border-radius: 14px;
+	--metadata-border-width: 1px;
+	--metadata-padding: 6px 10px;
+	--metadata-gap: 2px;
+	--metadata-label-text-color: var(--text-muted);
+	--metadata-label-text-color-hover: var(--text-normal);
+	--metadata-property-radius: 8px;
+	--metadata-property-radius-hover: 8px;
+	--metadata-property-radius-focus: 8px;
+	--metadata-property-box-shadow-hover: none;
+}
+
+.theme-dark {
+	--metadata-background: hsla(var(--accent-h), 30%, 60%, 0.07);
+	--metadata-border-color: hsla(var(--accent-h), 40%, 70%, 0.14);
+	--metadata-property-background-hover: hsla(var(--accent-h), 40%, 70%, 0.08);
+	--metadata-property-box-shadow-focus: 0 0 0 1px hsla(var(--accent-h), 50%, 70%, 0.35);
+}
+
+.theme-light {
+	--metadata-background: rgba(255, 255, 255, 0.45);
+	--metadata-border-color: hsla(var(--accent-h), 40%, 40%, 0.12);
+	--metadata-property-background-hover: hsla(var(--accent-h), 50%, 50%, 0.07);
+	--metadata-property-box-shadow-focus: 0 0 0 1px hsla(var(--accent-h), 50%, 45%, 0.35);
+}
+
+/* The sidebar "File properties" panel keeps Obsidian's plain list (it already sits on a card) */
+.workspace-leaf-content[data-type="file-properties"] {
+	--metadata-background: transparent;
+	--metadata-border-width: 0;
+	--metadata-padding: 8px 0;
+}
+
 .metadata-container {
-	margin-bottom: 40px;
+	margin-bottom: 24px;
+}
+
+.metadata-properties-heading {
+	font-size: var(--font-ui-small);
+	color: var(--text-faint);
 }
 
 /* Obsidian - Graph View */
