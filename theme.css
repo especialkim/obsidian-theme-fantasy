@@ -681,8 +681,11 @@ body:not(.fantasy-theme-card-off) {
 	--divider-width-hover: var(--cardview-gap);
 
 	--ribbon-padding: 0px;
-	/* 36px buttons + 8px left gap + 4px right gap. auto breaks --frame-left-space */
+	/* 36px buttons + 8px left gap + 4px right gap. auto breaks --frame-left-space.
+	   The ribbon keeps its own 4px gap (--fantasy-ribbon-gap): a larger card gap (Fantasy Easel)
+	   must not squeeze the icons in this fixed width. */
 	--ribbon-width: 48px;
+	--fantasy-ribbon-gap: 4px;
 
 	--tab-outline-color: transparent;
 }
@@ -718,8 +721,8 @@ body:not(.fantasy-theme-card-off) .mod-sidedock.mod-left-split {
 }
 
 body:not(.fantasy-theme-card-off) .workspace .side-dock-ribbon.mod-primary {
-	padding-left: var(--cardview-gap2);
-	padding-right: var(--cardview-gap);
+	padding-left: calc(var(--fantasy-ribbon-gap) * 2);
+	padding-right: var(--fantasy-ribbon-gap);
 }
 
 body:not(.fantasy-theme-card-off) .workspace-split.mod-vertical.mod-root>div,
@@ -772,7 +775,7 @@ body:not(.fantasy-theme-card-off) .workspace-ribbon,
 }
 
 body:not(.fantasy-theme-card-off) .side-dock-actions {
-	padding: var(--cardview-gap2) var(--cardview-gap);
+	padding: calc(var(--fantasy-ribbon-gap) * 2) var(--fantasy-ribbon-gap);
 	border-radius: var(--cardview-radius);
 }
 
