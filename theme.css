@@ -594,6 +594,13 @@ body.is-translucent {
 	background-color: var(--titlebar-background);
 }
 
+/* Window buttons (Windows · Linux, hidden frame): no solid patch of their own over the glass tab bar.
+   Same selectors as Obsidian's app.css (focused and not), so the theme's later rule wins. */
+.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right,
+.is-hidden-frameless:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right {
+	background-color: transparent;
+}
+
 body:not(.fantasy-theme-card-off).is-translucent:not(.is-fullscreen) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
 	background-color: var(--background-primary) !important;
 }
