@@ -34,8 +34,6 @@ body {
 	--fantasy-background-color-rgb: 30, 30, 30;
 	--fantasy-hue: 230;
 	--fantasy-light-l: 40%;
-	--titlebar-background: transparent;
-	--titlebar-background-focused: transparent;
 }
 
 .fantasy-theme-OrchidMagenta {
@@ -594,6 +592,13 @@ body.is-translucent {
 /* Title bar (shown in the separate settings window): plain, as without the translucent window */
 .is-translucent:not(.is-fullscreen) .titlebar {
 	background-color: var(--titlebar-background);
+}
+
+/* Window buttons (Windows · Linux, hidden frame): no solid patch of their own over the glass tab bar.
+   Same selectors as Obsidian's app.css (focused and not), so the theme's later rule wins. */
+.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right,
+.is-hidden-frameless:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right {
+	background-color: transparent;
 }
 
 body:not(.fantasy-theme-card-off).is-translucent:not(.is-fullscreen) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
