@@ -670,22 +670,25 @@ body.is-focused .workspace-ribbon.mod-primary {
 	border-radius: var(--radius-s) var(--radius-s) 0 0;
 }
 
-/* Layout - Card View (on by default; body.fantasy-theme-card-off turns it off) */
+/* Layout - Card View (on by default; body.fantasy-theme-card-off turns it off)
+   One gap everywhere (2026-10-24): window edge → ribbon card → sidebar card → note card → … →
+   window edge, and between stacked or split panes, is --cardview-gap and nothing else. Each gap
+   is one padding (the split / pane before it); flex gaps are off. Fantasy Easel's "Card gap"
+   slider sets it (1px or more). */
 body:not(.fantasy-theme-card-off) {
-	--cardview-gap: 4px;
+	--cardview-gap: 8px;
 	--cardview-gap2: calc(var(--cardview-gap) * 2);
 	--cardview-gap-padding: calc(var(--cardview-gap) * 2);
 	--cardview-margin: var(--cardview-gap);
 	--cardview-radius: 20px;
 	--cardview-padding: 10px 5px;
-	--divider-width-hover: var(--cardview-gap);
+	/* resize handles: a fixed grab zone centered on the gap (not the gap itself: 1px could not be grabbed) */
+	--divider-width-hover: 6px;
 
 	--ribbon-padding: 0px;
-	/* 36px buttons + 8px left gap + 4px right gap. auto breaks --frame-left-space.
-	   The ribbon keeps its own 4px gap (--fantasy-ribbon-gap): a larger card gap (Fantasy Easel)
-	   must not squeeze the icons in this fixed width. */
-	--ribbon-width: 48px;
-	--fantasy-ribbon-gap: 4px;
+	/* the 36px button card + the gap on each side; the card itself never shrinks.
+	   A fixed width: auto breaks --frame-left-space */
+	--ribbon-width: calc(36px + var(--cardview-gap) * 2);
 
 	--tab-outline-color: transparent;
 }
@@ -716,50 +719,43 @@ body:not(.fantasy-theme-card-off) .workspace-ribbon.mod-primary::before,
 	background-color: transparent;
 }
 
-body:not(.fantasy-theme-card-off) .mod-sidedock.mod-left-split {
-	padding-left: var(--cardview-gap);
-}
-
+/* window edge | gap | ribbon card | gap: the ribbon pads both sides */
 body:not(.fantasy-theme-card-off) .workspace .side-dock-ribbon.mod-primary {
-	padding-left: calc(var(--fantasy-ribbon-gap) * 2);
-	padding-right: var(--fantasy-ribbon-gap);
+	padding-inline: var(--cardview-gap);
 }
 
-body:not(.fantasy-theme-card-off) .workspace-split.mod-vertical.mod-root>div,
-body:not(.fantasy-theme-card-off) .mod-sidedock.mod-left-split {
-	padding-right: calc(var(--cardview-gap) + var(--divider-width-hover));
+/* left sidebar | gap | note area | gap | right sidebar | gap | window edge */
+body:not(.fantasy-theme-card-off) .mod-sidedock.mod-left-split,
+body:not(.fantasy-theme-card-off) .workspace-split.mod-vertical.mod-root>div {
+	padding-right: var(--cardview-gap);
 }
 
 body:not(.fantasy-theme-card-off) .mod-sidedock.mod-right-split {
-	padding-left: calc(var(--cardview-gap) + var(--divider-width-hover));
+	padding-left: var(--cardview-gap);
+	padding-right: var(--cardview-gap);
 }
 
 body:not(.fantasy-theme-card-off) .mod-root {
+	padding-inline: 0;
+}
+
+body:not(.fantasy-theme-card-off) .workspace:not(.is-right-sidedock-open) .mod-root {
 	padding-right: var(--cardview-gap);
-	padding-left: var(--cardview-gap);
 }
 
-body:not(.fantasy-theme-card-off) .workspace:not(.is-right-sidedock-open) .mod-root,
-body:not(.fantasy-theme-card-off) .mod-sidedock.mod-right-split {
-	padding-right: var(--cardview-gap2);
+/* a collapsed sidebar takes no room (the ribbon's own gap is the one before the note area) */
+body:not(.fantasy-theme-card-off) .mod-sidedock.is-sidedock-collapsed {
+	padding-inline: 0;
 }
 
+/* stacked panes in a sidebar */
 body:not(.fantasy-theme-card-off) .mod-sidedock.mod-left-split .workspace-tabs,
 body:not(.fantasy-theme-card-off) .mod-sidedock.mod-right-split .workspace-tabs {
-	padding-bottom: calc(var(--cardview-gap) + var(--divider-width-hover));
+	padding-bottom: var(--cardview-gap);
 }
 
 body:not(.fantasy-theme-card-off) .workspace-split.mod-vertical.mod-root>div:last-of-type {
 	padding-right: 0
-}
-
-/* Left sidebar collapsed: the split comes before the root (sibling), the ribbon gets is-collapsed */
-body:not(.fantasy-theme-card-off) .mod-left-split.is-sidedock-collapsed~.mod-root {
-	padding-left: 0
-}
-
-body:not(.fantasy-theme-card-off) .side-dock-ribbon.mod-primary.is-collapsed {
-	margin-right: var(--cardview-gap);
 }
 
 body:not(.fantasy-theme-card-off) .mod-sidedock.mod-right-split .workspace-tabs:last-of-type {
@@ -774,8 +770,9 @@ body:not(.fantasy-theme-card-off) .workspace-ribbon,
 	border: 0;
 }
 
+/* the ribbon's button card: its own padding, not the gap (36px wide: 28px icons) */
 body:not(.fantasy-theme-card-off) .side-dock-actions {
-	padding: calc(var(--fantasy-ribbon-gap) * 2) var(--fantasy-ribbon-gap);
+	padding: 8px 4px;
 	border-radius: var(--cardview-radius);
 }
 
@@ -819,8 +816,23 @@ body:not(.fantasy-theme-card-off) .mod-root .workspace-tab-header-container .wor
 	gap: calc(var(--cardview-gap) * 2);
 }
 
+/* the gaps are paddings (see Layout - Card View): no flex gap on top */
 body:not(.fantasy-theme-card-off) .workspace-split {
-	gap: var(--cardview-gap);
+	gap: 0;
+}
+
+/* resize handles centered on the gap (fixed grab zone, --divider-width-hover) */
+body:not(.fantasy-theme-card-off) .workspace-split.mod-primary-split > .workspace-leaf-resize-handle,
+body:not(.fantasy-theme-card-off) .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
+	inset-inline-end: calc((var(--cardview-gap) - var(--divider-width-hover)) / 2);
+}
+
+body:not(.fantasy-theme-card-off) .workspace-split.mod-secondary-split > .workspace-leaf-resize-handle {
+	inset-inline-start: calc((var(--cardview-gap) - var(--divider-width-hover)) / 2);
+}
+
+body:not(.fantasy-theme-card-off) .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+	bottom: calc((var(--cardview-gap) - var(--divider-width-hover)) / 2);
 }
 
 body:not(.fantasy-theme-card-off) .workspace-tab-header-container,
@@ -830,7 +842,7 @@ body:not(.fantasy-theme-card-off) .workspace-leaf-resize-handle {
 }
 
 body:not(.fantasy-theme-card-off) .mod-root .mod-vertical>.workspace-tabs {
-	padding-right: calc(var(--cardview-gap) + var(--divider-width-hover));
+	padding-right: var(--cardview-gap);
 }
 
 body:not(.fantasy-theme-card-off) .mod-root .mod-vertical>.workspace-tabs:last-of-type {
@@ -838,7 +850,7 @@ body:not(.fantasy-theme-card-off) .mod-root .mod-vertical>.workspace-tabs:last-o
 }
 
 body:not(.fantasy-theme-card-off) .mod-root .mod-horizontal>.workspace-tabs {
-	padding-bottom: calc(var(--cardview-gap) + var(--divider-width-hover));
+	padding-bottom: var(--cardview-gap);
 }
 
 body:not(.fantasy-theme-card-off) .mod-root .mod-horizontal>div:last-of-type,
@@ -847,7 +859,7 @@ body:not(.fantasy-theme-card-off) .mod-root .mod-horizontal>.workspace-tabs:last
 }
 
 body:not(.fantasy-theme-card-off) .mod-root .mod-horizontal>.mod-vertical {
-	padding-bottom: calc(var(--cardview-gap) + var(--divider-width-hover));
+	padding-bottom: var(--cardview-gap);
 }
 
 body:not(.fantasy-theme-card-off) .mod-root .workspace-tab-header {
@@ -870,7 +882,7 @@ body:not(.fantasy-theme-card-off) .workspace-tabs .workspace-tab-container {
 .workspace-split.mod-vertical.mod-root,
 .workspace-split.mod-horizontal.mod-sidedock.mod-right-split,
 .workspace-split.mod-horizontal.mod-sidedock.mod-left-split {
-	padding-bottom: var(--cardview-gap2, 5px);
+	padding-bottom: var(--cardview-gap, 5px);
 }
 
 /* Editor - Reading View */
