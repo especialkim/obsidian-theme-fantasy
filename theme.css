@@ -31,7 +31,7 @@ body.theme-light {
 
 /* Theme - Colors. Default (no class) = Dark. A class on body overrides it. */
 body {
-	--fantasy-background-color-rgb: 30, 30, 30;
+	--fantasy-background-color-rgb: 24, 26, 32;
 	--fantasy-hue: 230;
 	--fantasy-light-l: 40%;
 }
@@ -66,8 +66,10 @@ body {
 	--fantasy-light-l: 43%;
 }
 
+/* Graphite (class name kept: saved settings): a faint blue-gray, not plain gray, so the
+   dark glass does not wash out the background's color (2026-10-23) */
 .fantasy-theme-Black {
-	--fantasy-background-color-rgb: 30, 30, 30;
+	--fantasy-background-color-rgb: 24, 26, 32;
 	--fantasy-hue: 230;
 	--fantasy-light-l: 40%;
 }
@@ -1176,7 +1178,7 @@ span.math {
 }
 
 .nav-file-title.is-active {
-	background-color: hsla(var(--accent-hsl), 0.3);
+	background-color: hsla(var(--color-accent-hsl), 0.3);
 }
 
 /* Obsidian - Rainbow Folder */
