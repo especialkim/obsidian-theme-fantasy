@@ -676,7 +676,7 @@ body.is-focused .workspace-ribbon.mod-primary {
    is one padding (the split / pane before it); flex gaps are off. Fantasy Easel's "Card gap"
    slider sets it (1px or more). */
 body:not(.fantasy-theme-card-off) {
-	--cardview-gap: 8px;
+	--cardview-gap: 12px;
 	--cardview-gap2: calc(var(--cardview-gap) * 2);
 	--cardview-gap-padding: calc(var(--cardview-gap) * 2);
 	--cardview-margin: var(--cardview-gap);
