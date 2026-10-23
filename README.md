@@ -1,6 +1,8 @@
 # Fantasy
 
-A glassy Obsidian theme: translucent panels over a colorful wallpaper, in dark and light mode.
+**Glass panels over your wallpaper.** A glassy Obsidian theme: translucent cards over a colorful gradient, in dark and light mode.
+
+![Fantasy in dark and light mode](assets/hero.jpg)
 
 ## Features
 
@@ -10,6 +12,12 @@ A glassy Obsidian theme: translucent panels over a colorful wallpaper, in dark a
 - **Readable glass**: tuned so text stays readable over the panels.
 - **Rainbow folders** in the file explorer and bookmarks, and per-file-type icons.
 - Dark and light mode.
+
+## Screenshots
+
+| Light mode, outline open | The wallpaper behind the glass |
+| --- | --- |
+| ![Reading note in light mode](assets/reading-light.jpg) | ![Dark mode with the sidebars closed](assets/wallpaper-dark.jpg) |
 
 ## Settings
 
