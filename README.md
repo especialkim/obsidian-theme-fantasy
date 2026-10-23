@@ -4,20 +4,23 @@ A glassy Obsidian theme: translucent panels over a colorful wallpaper, in dark a
 
 ## Features
 
-- **Glass panels** over a built-in gradient wallpaper (Plasma). No network: everything is in `theme.css`.
-- **Card layout**: sidebars, ribbon and editor float as rounded glass cards.
+- **Glass panels** over a built-in gradient wallpaper (Silk, tinted by the palette). No network: everything is in `theme.css`.
+- **Card layout**: sidebars, ribbon and editor float as rounded glass cards, with one even gap everywhere.
 - **Same look with or without** Obsidian's translucent window (Settings → Appearance).
-- **Readable glass**: text keeps a 4.5:1 contrast over the panels.
+- **Readable glass**: tuned so text stays readable over the panels.
 - **Rainbow folders** in the file explorer and bookmarks, and per-file-type icons.
 - Dark and light mode.
 
 ## Settings
 
-Fantasy has no Style Settings options. Settings will come with a companion plugin, **Fantasy Easel** (in the works):
+Fantasy has no Style Settings options. It looks complete on its own: the Graphite palette, the Silk wallpaper and the card layout.
 
-> - six theme colors and a theme accent
+Settings come with a companion plugin, **Fantasy Easel** (in the works):
+
+> - six palettes (Graphite, Sky, Ocean, Emerald, Mystic, Orchid) and a theme accent
 > - card layout on / off
-> - more wallpapers, still and slowly moving, and your own pictures
+> - a style panel: glass opacity, blur and brightness per mode, card gap and corners, note width, heading size, paragraph spacing
+> - more wallpapers, still and moving, and your own pictures
 > - plugin skins (Excalidraw, Dataview, Kanban)
 
 ## Requirements
