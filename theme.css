@@ -2,7 +2,7 @@
 
 /* Optional body classes (a companion plugin may set them; none are needed):
    fantasy-theme-<Color>, fantasy-theme-accent, fantasy-theme-card-off.
-   Without them: Dark color, Plasma background, card layout on. */
+   Without them: Graphite palette, Silk background (still), card layout on (12px gap). */
 
 /* Native controls (scrollbars, inputs, date pickers) follow the mode and the accent.
    The date picker popup itself is drawn by Chromium: these two are all CSS can set. */

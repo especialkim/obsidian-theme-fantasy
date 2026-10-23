@@ -15,13 +15,13 @@ A glassy Obsidian theme: translucent panels over a colorful wallpaper, in dark a
 
 Fantasy has no Style Settings options. It looks complete on its own: the Graphite palette, the Silk wallpaper and the card layout.
 
-Settings come with a companion plugin, **Fantasy Easel** (in the works):
+Settings come with a companion plugin, **[Fantasy Easel](https://github.com/especialkim/obsidian-fantasy-easel)** (install it from GitHub until it is listed in Community plugins):
 
 > - six palettes (Graphite, Sky, Ocean, Emerald, Mystic, Orchid) and a theme accent
 > - card layout on / off
 > - a style panel: glass opacity, blur and brightness per mode, card gap and corners, note width, heading size, paragraph spacing
 > - more wallpapers, still and moving, and your own pictures
-> - plugin skins (Excalidraw, Dataview, Kanban)
+> - plugin styles (Excalidraw, Dataview, Kanban), each part on or off
 
 ## Requirements
 
