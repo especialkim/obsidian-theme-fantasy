@@ -466,7 +466,7 @@ body.theme-light .nav-files-container>div>.tree-item .tree-item-icon svg {
 
 body.theme-light .status-bar,
 body.theme-light .app-container>.horizontal-main-container {
-	backdrop-filter: brightness(1.05) saturate(1.1) blur(12px);
+	backdrop-filter: brightness(var(--fantasy-glass-brightness, 1.05)) saturate(1.1) blur(var(--fantasy-glass-blur, 12px));
 }
 
 /* Base - Cursor */
@@ -574,7 +574,8 @@ body .app-container {
 
 .status-bar,
 .app-container>.horizontal-main-container {
-	backdrop-filter: brightness(0.8) blur(8px);
+	/* --fantasy-glass-*: set by Fantasy Easel's style panel; not set = these values */
+	backdrop-filter: brightness(var(--fantasy-glass-brightness, 0.8)) blur(var(--fantasy-glass-blur, 8px));
 }
 
 /* Translucent window (Settings → Appearance) looks the same as without it, in both layouts.
