@@ -2,6 +2,8 @@
 
 **Glass panels over your wallpaper.** A glassy Obsidian theme: translucent cards over a colorful gradient, in dark and light mode.
 
+**Zero setup.** Pick the theme and you are done: no Style Settings, no CSS snippets, nothing loaded from the internet.
+
 ![Fantasy in dark and light mode](assets/hero.jpg)
 
 ## Features
@@ -19,11 +21,16 @@
 | --- | --- |
 | ![Reading note in light mode](assets/reading-light.jpg) | ![Dark mode with the sidebars closed](assets/wallpaper-dark.jpg) |
 
+## Install
+
+- **Community themes:** Settings → Appearance → Themes → Manage → search "Fantasy" → Install and use.
+- **Manual:** copy `theme.css` and `manifest.json` to `<vault>/.obsidian/themes/Fantasy/`, then choose Fantasy in Settings → Appearance.
+
 ## Settings
 
 Fantasy has no Style Settings options. It looks complete on its own: the Graphite palette, the Silk wallpaper and the card layout.
 
-Settings come with a companion plugin, **[Fantasy Easel](https://github.com/especialkim/obsidian-fantasy-easel)** (install it from GitHub until it is listed in Community plugins):
+Optional settings come with a companion plugin, **[Fantasy Easel](https://github.com/especialkim/obsidian-fantasy-easel)** (install it from GitHub until it is listed in Community plugins):
 
 > - six palettes (Graphite, Sky, Ocean, Emerald, Mystic, Orchid) and a theme accent
 > - card layout on / off
@@ -42,7 +49,9 @@ Settings come with a companion plugin, **[Fantasy Easel](https://github.com/espe
 
 ## Support
 
-If you enjoy it, you can [buy me a coffee](https://buymeacoffee.com/yongminkiml). ☕️
+Fantasy is made and kept up to date by one person. If it makes your notes a little nicer to look at, a coffee is a lovely way to say thanks.
+
+<a href="https://buymeacoffee.com/yongminkiml"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy me a coffee" height="40"></a>
 
 ## License
 
