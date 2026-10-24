@@ -1101,15 +1101,6 @@ td:last-child {
 	background-color: rgba(255, 255, 255, 0.03);
 }
 
-/* Editor - LaTeX */
-span.math {
-	width: 100%;
-	display: block;
-	font-size: 2rem;
-	text-align: center;
-	color: var(--color-accent-35);
-}
-
 /* Editor - Task */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox {
 	margin-inline-end: 0.5em;
@@ -1426,13 +1417,8 @@ body {
 }
 
 /* Obsidian - Markdown Embed */
+/* Obsidian's defaults for headings and math; hiding embed headings or a large block math is a Fantasy Easel option (2026-10-24) */
 .internal-embed.markdown-embed.inline-embed.is-loaded .markdown-embed-title,
-.internal-embed.markdown-embed.inline-embed.is-loaded .markdown-preview-section h1,
-.internal-embed.markdown-embed.inline-embed.is-loaded .markdown-preview-section h2,
-.internal-embed.markdown-embed.inline-embed.is-loaded .markdown-preview-section h3,
-.internal-embed.markdown-embed.inline-embed.is-loaded .markdown-preview-section h4,
-.internal-embed.markdown-embed.inline-embed.is-loaded .markdown-preview-section h5,
-.internal-embed.markdown-embed.inline-embed.is-loaded .markdown-preview-section h6,
 .internal-embed.markdown-embed.inline-embed.is-loaded .inline-title,
 .internal-embed.markdown-embed.inline-embed.is-loaded .mod-header {
 	display: none;
