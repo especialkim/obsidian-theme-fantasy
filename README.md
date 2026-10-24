@@ -40,6 +40,10 @@ Settings come with a companion plugin, **[Fantasy Easel](https://github.com/espe
 - Inspired by [AnuPpuccin](https://github.com/AnubisNekhet/anuppuccin) by AnubisNekhet. Fantasy contains no AnuPpuccin code.
 - File explorer icons from [Lucide](https://lucide.dev) (ISC License). See [LICENSE](./LICENSE).
 
+## Support
+
+If you enjoy it, you can [buy me a coffee](https://buymeacoffee.com/yongminkiml). ☕️
+
 ## License
 
 [MIT](./LICENSE) © 2026 YongMin Kim
