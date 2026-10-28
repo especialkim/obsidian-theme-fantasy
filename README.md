@@ -45,7 +45,7 @@ Optional settings come with a companion plugin, **[Fantasy Easel](https://github
 ## Credits
 
 - Inspired by [AnuPpuccin](https://github.com/AnubisNekhet/anuppuccin) by AnubisNekhet. Fantasy contains no AnuPpuccin code.
-- File explorer icons from [Lucide](https://lucide.dev) (ISC License). See [LICENSE](./LICENSE).
+- File explorer icons from [Lucide](https://lucide.dev) (ISC License). See [THIRD-PARTY-NOTICES](./THIRD-PARTY-NOTICES.md).
 
 ## Support
 
