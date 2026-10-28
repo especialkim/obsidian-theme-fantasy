@@ -140,6 +140,10 @@ body {
 	--callout-warning: rgb(166, 104, 42);
 	--callout-quote: rgb(130, 130, 130);
 
+	/* Set here, not on .app-container: Obsidian derives list markers, checkbox borders
+	   and placeholders from --text-faint on body, and modals live outside .app-container */
+	--text-faint: var(--color-base-60);
+
 	/* Custom Color Var */
 
 	--background-opacity: 0.67;
@@ -386,6 +390,7 @@ body.theme-light {
 	--color-accent-20: hsl(calc(var(--accent-h) + 20), 70%, var(--fantasy-light-l, 35%));
 	--color-accent-35: hsl(calc(var(--accent-h) + 35), 70%, var(--fantasy-light-l, 35%));
 	--text-muted: #5c5c5c;
+	--text-faint: #707070;
 	--tab-text-color: var(--color-base-80);
 
 	/* Links and tags use the accent at the contrast-safe lightness */
@@ -405,14 +410,12 @@ body.theme-light {
 /* Without the Fantasy accent, Obsidian's own accent hue is used: one safe lightness for all */
 body.theme-light:not(.fantasy-theme-accent) {
 	--fantasy-light-l: 36%;
-	--text-faint: var(--color-base-60);
 }
 
 body.theme-light .app-container {
 	--background-modifier-hover: rgba(0, 0, 0, 0.05);
 	--background-modifier-border: rgba(0, 0, 0, 0.08);
 	--background-modifier-form-field: rgba(255, 255, 255, 0.9);
-	--text-faint: #707070;
 }
 
 /* Dark without the Fantasy accent: Obsidian's accent hue at a pastel lightness (>= 4.5:1 on the dark glass) */
@@ -561,7 +564,6 @@ body .app-container {
 	--background-modifier-form-field: var(--background-secondary);
 
 	--search-result-background: var(--background-primary);
-	--text-faint: var(--color-base-60);
 
 	--titlebar-background: var(--background-secondary);
 	--tab-container-background: var(--background-secondary);
