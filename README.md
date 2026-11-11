@@ -30,7 +30,7 @@
 
 Fantasy has no Style Settings options. It looks complete on its own: the Graphite palette, the Silk wallpaper and the card layout.
 
-Optional settings come with a companion plugin, **[Fantasy Easel](https://github.com/especialkim/obsidian-fantasy-easel)** (install it from GitHub until it is listed in Community plugins):
+Optional settings come with a companion plugin, **[Fantasy Easel](https://community.obsidian.md/plugins/fantasy-easel)**:
 
 > - six palettes (Graphite, Sky, Ocean, Emerald, Mystic, Orchid) and a theme accent
 > - card layout on / off
