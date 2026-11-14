@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+/* @settings
+name: Fantasy
+id: fantasy-theme-settings
+settings:
+  - id: fantasy-easel-notice
+    title: Style Settings is not supported
+    description: "Fantasy does not support Style Settings. Theme styles (palettes, accent, card layout, style tuning, wallpapers, and plugin styles) are supported in **[Fantasy Easel](https://community.obsidian.md/plugins/fantasy-easel)**."
+    type: info-text
+    markdown: true
+*/
+
 /* Optional body classes (a companion plugin may set them; none are needed):
    fantasy-theme-<Color>, fantasy-theme-accent, fantasy-theme-card-off.
    Without them: Graphite palette, Silk background (still), card layout on (12px gap). */
